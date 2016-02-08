@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         
+     h1{
+        color:#FF0000;
+        font-size:300%;
+          }
+        
+     a.ref_link:link {color:#ff0000;}
+     a.ref_link:visited {color:#0000ff;}
+     a.ref_link:hover {color:#ffcc00;}  
+     
+     .home-page-link {
+          color: #58B14C;
+        }
+     .home-page-link:hover {
+         color: #FF5A5F;
+         text-decoration: none;
+        }
+        
+     .link-to-reviews {
+         color: black;
+         text-decoration: underline;
+         font-size: 16px;
+         font-weight: bold;
+        }
+     .link-to-reviews:hover {
+         color: #58B14C;
+        }
+          
+     .row1{
+         background-color: #FFFFFF;    
+         
+          }
+     .row2{
+         background-color: #FFFFFF;
+          }
+          
+     .row{
+         background-color: #FFFFFF;
+         padding-top: 10px;
+         padding-right: 30px;
+         padding-bottom: 5px;
+         padding-left: 30px;
+          }
+          
+     .row3{
+         background-color: #FFFFFF;
+         
+         padding-top: 5px;
+         padding-right: 30px;
+         padding-bottom: 5px;
+         padding-left: 30px;
+          }
+     .recommend_dim{
+          font-size: 25px;
+          text-indent: 50px;
+          word-spacing: 5px;
+          }
+     .chart{
+          
+          margin: auto auto;
+          padding-bottom: 5px;      
+          }
+          
+      .sample-review{
+           background-color: #FFFFFF
+           padding-top: 5px;
+           padding-right: 30px;
+           padding-bottom: 5px;
+           padding-left: 30px;
+          }
+      .review-text{
+           background-size: 100%;
+           padding-top: 5px;
+           padding-right: 30px;
+           padding-bottom: 5px;
+           padding-left: 30px;
+           font-style: italic;
+           font-size: 20px;
+           font-family: "Comic Sans MS", cursive, sans-serif;
+           color: #000000;
+           
+           word-spacing: 5px;
+           text-indent: 50px;
+           line-height: 150%;
+          }
+        .main_result{
+            margin-bottom: 30px;
+          }
+
+    .dropdown-content {
+        border: 0 none;
+        color: #FFFFFF;
+        background: transparent;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 2px 10px;
+        width: 378px;
+        *width: 350px;
+        *background: #58B14C;
+    }
+
+    .mainselection {
+        overflow: hidden;
+        width: 350px;
+        -moz-border-radius: 9px 9px 9px 9px;
+        -webkit-border-radius: 9px 9px 9px 9px;
+        border-radius: 9px 9px 9px 9px;
+        box-shadow: 1px 1px 11px #330033;
+        background: no-repeat scroll 319px 5px #58B14C;
+        padding-top: 10px;
+        padding-right: 30px;
+        padding-bottom: 5px;
+        
+    }
+    .improvement-keywords {
+        border: 1px solid #C1E1A6;
+        border-radius: 4px;
+        background: #C1E1A6;
+        padding: 10px 8px 10px 8px;
+        margin-bottom: 40px;
+          }
+          
+    .recommendation-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: bold;
+          }
+          
+    .keywords {
+        font-size: 17px;
+        font-weight: bold;
+        color: white;
+        background-color: #58B14C; 
+          }
+       .box {
+          
+          display: none;
+          width: 350px;
+          height: 400px;
+            }
+       .box img {
+         
+          width: 350px;
+          height: 400px;
+        }
+        .red {
+          background: #ff0000;
+        }
+        .green {
+          background: #00ff00;
+        }
+        .blue {
+          background: #0000ff;
+        }
+        
+     blockquote.style {
+          font: 14px/22px normal helvetica, sans-serif;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 50px;
+          padding-left: 15px;
+          border-left: 3px solid #ccc;
+        } 
+ 
+    </style>
+      
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Airbnb Host Helper</title>
+      
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+
+    <script src="/static/js/jquery.min.js"></script>
+      
+      
+  </head>
+
+  <body>
+      <script type="text/javascript">
+
+        $(document).ready(function() {
+          $("select").change(function() {
+            $("select option:selected").each(function() {
+              if ($(this).attr("value") == "Choose") {
+                $(".box").hide();
+              }
+              if ($(this).attr("value") == "Communication") {
+                $(".box").hide();
+                $(".communication").show();
+              }
+              if ($(this).attr("value") == "Transportation") {
+                $(".box").hide();
+                $(".transportation").show();
+              }
+              if ($(this).attr("value") == "Area:Convenience") {
+                $(".box").hide();
+                $(".convenience").show();
+              }
+              if ($(this).attr("value") == "Experience") {
+                $(".box").hide();
+                $(".experience").show();
+              }
+              if ($(this).attr("value") == "Arrival") {
+                $(".box").hide();
+                $(".arrival").show();
+              }
+              if ($(this).attr("value") == "Area:Fun") {
+                $(".box").hide();
+                $(".fun").show();
+              }
+              if ($(this).attr("value") == "Food") {
+                $(".box").hide();
+                $(".food").show();
+              }
+              if ($(this).attr("value") == "Amenity") {
+                $(".box").hide();
+                $(".amenity").show();
+              }
+            });
+          }).change();
+        });
+    
+    </script>
+
+<br><br>
+    <div class="container">
+    <div id="banner"></div>
+        
+    
+    <div class="row1">
+        <div class="starter-template">
+            <h1><a class="home-page-link" href="/input">Welcome to Airbnb Host Helper</a></h1>      
+        </div>
+    </div>
+    
+    <hr>
+      
+    <div class="row2">
+      <div class="main_result">
+        <h2>Eight-Dimension Review Analysis </h2>    
+     </div>
+    
+        
+        
+    <div class="row">
+        
+        <div class="col-md-4 col-xs-12">
+            
+            
+            <div id="recommendation-results" class="improvement-keywords">
+                <p class="recommendation-title">Recommended Improvment Dimensions:</p>
+                <p>
+                        {% for result in results %}
+                            <span class="keywords">
+                               {{result}}
+                            </span>
+                           <span>&nbsp;&nbsp;</span>
+                        {% endfor %}
+                   
+                    
+                </p>
+                <p><a href="#sample-review" class="link-to-reviews">Reference listing reviews</a></p>
+            </div>
+            <div class="mainselection">
+              <select class="dropdown-content">
+                <option value = "Choose">Choose Dimension</option>
+                <option value="Communication">Communication</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Neighbourhood:Convenience">Area:Convenience</option>
+                <option value="Experience">Experience</option>
+                <option value="Arrival">Arrival</option>
+                <option value="Neighbourhood:Fun">Area:Fun</option>
+                <option value="Food">Food</option>
+                <option value="Amenity">Amenity</option>
+              </select>           
+            </div>
+        <div class="communication box">
+          <img src="/static/images/communication.png" alt="Fjords" width="350" height="400"/>
+        </div>
+        <div class="transportation box">
+          <img src="/static/images/transportation.png" alt="Fjords" width="200" height="200"/>
+        </div>
+        <div class="convenience box">
+          <img src="/static/images/convenience.png" alt="Fjords" width="200" height="200"/>
+        </div>
+        <div class="experience box">
+          <img src="/static/images/experience.png" alt="Fjords" width="200" height="200"/>
+        </div>
+        <div class="arrival box">
+          <img src="/static/images/arrival.png" alt="Fjords" width="200" height="200"/>
+        </div>
+        <div class="fun box">
+          <img src="/static/images/fun.png" alt="Fjords" width="200" height="200"/>
+        </div>
+        <div class="food box">
+          <img src="/static/images/food.png" alt="Fjords" width="200" height="200"/>
+        </div>
+        <div class="amenity box">
+          <img src="/static/images/amenity.png" alt="Fjords" width="200" height="200"/>
+        </div>
+        </div>
+        
+      <div class="col-md-8 col-xs-12">
+          <div class="chart" id="chart_show">
+             <div class="pygal_chart">{{chart|safe}}</div>
+          </div>
+      </div>
+
+        
+    </div>   
+      <hr>
+      <br>
+          
+       <div id="sample-review" class="sample-review">
+        <h3>Check out the <a class="ref_link" href={{ref_link}} target={{ref_link}}>best listing</a> in your area. Below is one of its reviews:</h3>
+        <blockquote class = style> 
+          {% for review in output_reviews %}
+              <div class="review-text">"{{review}}"</div>            
+          {% endfor %}
+            </blockquote>
+        </div>
+       </div>
+      </div><!-- container -->
+      <br>
+      <br>
+       
+
+      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="static/js/bootstrap.min.js"></script>
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    
+  </body>
+</html>
+

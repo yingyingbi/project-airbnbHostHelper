@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    
+    .imageCycle1{
+         background-image: url("http://andnorth.com/wp-content/uploads/2015/04/Smoky-Belles_wb000.jpg");
+         background-size: 100%; 
+        }
+    .imageCycle2{
+         background-image: url("http://www.zastavki.com/pictures/1920x1200/2009/Interior_Nice_Room_016910_.jpg");
+         background-size: 100%; 
+        }
+    .imageCycle3{
+         background-image: url("http://svetainiukurimas.co/wp-content/uploads/2016/01/breakfast-room-chairs-when-designing-for-dining-room-furniture-on-diningroom-very-nice.jpg");
+         background-size: 100%; 
+        }
+    .imageCycle4{
+         background-image: url("http://www.winstonpersonalinjury.com/wp-content/uploads/2014/08/room.jpg");
+         background-size: 100%; 
+        }
+    .imageCycle5{
+         background-image: url("http://www.chicagoize.com/wp-content/uploads/2015/06/Brown-Color-Sofa-Using-Modern-Sofa-Design-for-Living-Room-Ideas-with-Sectionals-Using-Nice-Carpet-on-the-Wooden-Floor.jpg");
+         background-size: 100%; 
+        }
+    .imageCycle6{
+         background-image: url("http://betweennapsontheporch.net/wp-content/uploads/blogger/-1PNFVH8C1yQ/T5quLKjMgkI/AAAAAAAAnC8/GvMIv8yvDGg/s1600/XL_39716_Dining-Room.jpg");
+         background-size: 100%; 
+        }
+    .imageCycle7{
+         background-image: url("http://www.neverendingfootsteps.com/wp-content/uploads/2015/03/airbnb-tacoma.jpg");
+         background-size: 100%; 
+        }
+    .imageCycle8{
+         background-image: url("http://www.matirose.com/wp-content/uploads/2015/04/airbnb-living-room.jpg");
+         background-size: 100%; 
+        }
+    h1{
+        color:red;
+        font-size:300%;
+          }
+    .lead{
+        font-size:200%;
+          }
+    .input{
+        font-size: 20px;
+          }
+    .start-panel {
+        width: 90%;
+        margin: 22% auto 0 auto;
+          }
+    .input-box {
+        height: 50px;;
+        font-size: 20px;
+        }
+    
+    .btn-default.button-custom {
+        background-color: #FF5A5F;
+        border-color: #FF5A5F #FF5A5F #E00007;
+        color: white;
+        }
+    .welcome {
+        margin-bottom: 30px;
+        text-align: center;
+        text-shadow: 3px 3px 8px #000;
+        }
+    .form-inline.form-custom {
+        margin: 0 auto;
+        width: 500px;
+        }
+    
+        
+    </style>
+      
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Airbnb Host Helper</title>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+      
+    <script src="/static/js/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            var classCycle=['imageCycle1','imageCycle2','imageCycle3','imageCycle4','imageCycle5','imageCycle6','imageCycle7','imageCycle8'];
+
+            var randomNumber = Math.floor(Math.random() * classCycle.length);
+            var classToAdd = classCycle[randomNumber];
+    
+            $('body').addClass(classToAdd);
+
+        });
+    
+    </script>
+      
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Airbnb Host Helper</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="https://www.slideshare.net/secret/MlSP8okS8ZcEky">Slides</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+      
+    <div class="container">
+        <div class="start-panel">
+            <div class="welcome">
+                <h1 class=welcome-head style="color:white;">Welcome to Airbnb Host Helper</h1>
+            </div>
+
+            <form  action="/output" method="GET" class="form-inline form-custom">
+                <div class="form-group">
+                  <input class="input-box" type="text" id="Listing_ID" size="35" style = "font-size:20" name='Listing_ID' placeholder="Please enter your listing ID">
+                </div>
+   
+               <button type="submit" size="10" class="btn btn-default btn-lg button-custom">Submit</button>
+
+            </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+  </div> <!-- /.container-->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    
+  </body>
+</html>
+
